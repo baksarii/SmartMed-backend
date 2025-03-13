@@ -18,7 +18,7 @@ app.get("/", (req, res) => {
 
 // 사용자 라우트
 const userRoutes = require("./routers/users");
-app.use("/api", userRoutes); // "/api" 경로를 users.js에 연결
+app.use("/api", userRoutes); 
 
 const authRoutes = require("./routers/auth");
 app.use("/api", authRoutes);
@@ -28,6 +28,9 @@ app.use("/api", guardianRoutes);
 
 const gardlistRoutes = require("./routers/gardlist");
 app.use("/api", gardlistRoutes);
+
+const medicationsRoutes = require("./routers/medications");
+app.use("/api", medicationsRoutes);
 
 // 서버 실행
 app.listen(PORT, () => {

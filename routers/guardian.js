@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const pool = require("../db"); // DB 연결 파일
+const pool = require("../db");
 
 // 보호자 정보 추가 라우트
 router.post("/add-guardian", async (req, res) => {
